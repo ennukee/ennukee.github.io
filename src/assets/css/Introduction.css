@@ -1,5 +1,5 @@
 #intro-container {
-    background-color: #83cdff;
+    background-color: var(--bg-color);
     padding-top: 30px;
 
     display: flex;
@@ -15,9 +15,28 @@
     font-size: 80px;
     font-family: 'Lexend Deca', sans-serif;
     /* font-weight: bold; */
+
+    animation: 1s ease-out 0s 1 fadeIn,
+        1s ease-out 0s 1 fromTop;
 }
 
 #slogan {
     font-size: 30px;
     font-family: 'Lexend Deca', sans-serif;
+    opacity: 0;
+
+    animation: 1s ease-out 0.75s 1 fadeIn,
+        1s ease-out 0.75s 1 fromBottom;
+    animation-fill-mode: forwards;
+}
+
+@keyframes nameIntro {
+    0% {
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
 }

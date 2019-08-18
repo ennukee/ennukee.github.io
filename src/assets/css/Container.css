@@ -1,1 +1,14 @@
+.text {
+    color: rgb(229, 230, 225);
+    font-family: 'Lexend Deca', sans-serif;
+}
 
+div#body {
+    background-image: linear-gradient(
+        to bottom,
+        #222222ee,
+        #222222cc),
+        url(https://wallpaperstream.com/wallpapers/full/night-city/Night-City-View-Tokyo.jpg);
+
+    height: 100vh;
+}
