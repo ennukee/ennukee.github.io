@@ -12,3 +12,8 @@ div#body {
 
     height: 100vh;
 }
+
+#top-container {
+    transition: all 0.25s;
+    /* transition-delay: 0.25s; */
+}
