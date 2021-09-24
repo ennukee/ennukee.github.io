@@ -7,7 +7,7 @@ function Container() {
         <div
             id="body"
             className={isLightMode ? 'light' : 'dark'}
-        >   
+        >
             <div id="background-color-fader" />
             <div id="light-mode-controls">
                 <div
