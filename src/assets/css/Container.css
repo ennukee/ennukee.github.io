@@ -17,7 +17,7 @@
 /* ! --------- ! */
 
 #body.light {
-    background: url('/background2.png'); 
+    background: url('../img/background2.png'); 
     background-size: cover;
     color: #171710;
 }
@@ -36,7 +36,7 @@
 }
 
 #body.dark {
-    background: url('/background.png'); 
+    background: url('../img/background.png'); 
     background-size: cover;
     color: #e8e8ef;
 }
