@@ -1,19 +1,186 @@
 .text {
-    color: rgb(229, 230, 225);
-    font-family: 'Lexend Deca', sans-serif;
+    transition: color 0.5s;
 }
 
-div#body {
-    background-image: linear-gradient(
-        to bottom,
-        #222222ee,
-        #222222cc),
-        url(https://wallpaperstream.com/wallpapers/full/night-city/Night-City-View-Tokyo.jpg);
-
+#body {
+    width: 100vw;
     height: 100vh;
+
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
 }
 
-#top-container {
-    transition: all 0.25s;
-    /* transition-delay: 0.25s; */
+/* ! --------- ! */
+/* * DARK MODE * */
+/* ! --------- ! */
+
+#body.light {
+    background: url('/background2.png'); 
+    color: #171710;
+}
+
+#body.light svg {
+    fill: #171710;
+}
+
+#body.light #background-color-fader {
+    background-color: #fff;
+    opacity: 0.3;
+}
+
+#body.light #period {
+    background-color: #47f;
+}
+
+#body.dark {
+    background: url('/background.png'); 
+    color: #e8e8ef;
+}
+
+#body.dark svg {
+    fill: #e8e8ef;
+}
+
+#body.dark #background-color-fader {
+    background-color: #000;
+    opacity: 0.7;
+}
+
+#body.dark #period {
+    background-color: #429;
+}
+
+/* ! ----------- ! */
+/* ! MAIN STYLES ! */
+/* ! ----------- ! */
+
+#background-color-fader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    transition: background-color 0.5s;
+}
+
+#light-mode-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 30px;
+    gap: 15px;
+
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+}
+
+.mode-select {
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+}
+
+#dark-mode-select {
+    background-color: #429;
+}
+
+#dark-mode-select.selected {
+    border: 3px solid #e8e8ef;
+}
+
+#light-mode-select {
+    background-color: #acf;
+}
+
+#light-mode-select.selected {
+    border: 3px solid #171710;
+}
+
+#intro-container {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    
+    margin-left: 8%;
+}
+
+#name {
+    font-size: 100px;
+    line-height: 100px;
+
+    font-weight: 500;
+
+    animation: 0.75s ease-out 0s 1 fadeIn,
+        0.75s ease-out 0s 1 fromTop;
+}
+
+#name #period {
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 0.2rem;
+    margin-left: 2px;
+}
+
+#pronunciation {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    opacity: 0;
+
+    animation: 0.75s ease-out 0.3s 1 fadeIn,
+        0.75s ease-out 0.3s 1 fromBottom;
+    animation-fill-mode: forwards;
+}
+
+#slogan {
+    font-size: 30px;
+    opacity: 0;
+
+    animation: 0.75s ease-out 0.75s 1 fadeIn,
+        0.75s ease-out 0.75s 1 fromBottom;
+    animation-fill-mode: forwards;
+}
+
+#socials {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+/* ! SVG SECTION */
+
+#socials svg {
+    width: 36px;
+    height: 36px;
+}
+
+#socials a {
+    opacity: 0;
+
+    animation: 0.75s ease-out 0s 1 fadeIn,
+        0.75s ease-out 0s 1 fromBottom;
+    animation-fill-mode: forwards;
+}
+
+#socials a:nth-child(1) {
+    animation-delay: 1s
+}
+
+#socials a:nth-child(2) {
+    animation-delay: 1.1s
+}
+
+#socials a:nth-child(3) {
+    animation-delay: 1.2s
+}
+
+#socials a:nth-child(4) {
+    animation-delay: 1.3s
 }
