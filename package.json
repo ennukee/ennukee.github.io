@@ -1,7 +1,7 @@
 {
   "name": "site",
   "version": "0.1.0",
-  "homepage": "https://ennukee.github.io/",
+  "homepage": "https://dbowers.io/",
   "private": true,
   "dependencies": {
     "react": "^16.9.0",
