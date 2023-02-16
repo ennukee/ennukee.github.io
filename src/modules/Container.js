@@ -1,8 +1,13 @@
 import React, { useState } from 'react'
 import '../assets/css/Container.css'
 
+const userDefaultDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+
+// Can be disabled if there's no recent projects worth displaying
+const ENABLE_SEE_MORE = true
+
 function Container() {
-    const [ isLightMode, setLightMode ] = useState(false)
+    const [ isLightMode, setLightMode ] = useState(userDefaultDarkMode)
     return (
         <div
             id="body"
@@ -47,6 +52,13 @@ function Container() {
                     </a>
                 </div>
             </div>
+            {ENABLE_SEE_MORE && <div id="see-more-container">
+                <div id="see-more-title">recent projects</div>
+                <div id="see-more-divider" />
+                <div id="see-more-project-list">
+                    <a className="project link" href="/ai-showcase">ai image showcase</a>
+                </div>
+            </div>}
         </div>
     );
 }

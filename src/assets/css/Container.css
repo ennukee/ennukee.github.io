@@ -10,6 +10,8 @@
 
     display: flex;
     align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -26,9 +28,6 @@
     background: url('../img/background2.png'); 
     background-size: cover;
     color: #171710;
-}
-
-#body.light svg {
     fill: #171710;
 }
 
@@ -41,13 +40,20 @@
     background-color: #47f;
 }
 
+#body.light .link {
+    color: #36f;
+    /* font-weight: 400; */
+}
+
+#body.light .link:hover {
+    color: #03c;
+}
+
+
 #body.dark {
     background: url('../img/background.png'); 
     background-size: cover;
     color: #e8e8ef;
-}
-
-#body.dark svg {
     fill: #e8e8ef;
 }
 
@@ -60,9 +66,77 @@
     background-color: #429;
 }
 
+#body.dark #see-more-divider {
+    background-color: #e8e8ef;
+}
+
+#body.dark .link {
+    color: #b9f
+}
+
+#body.dark .link:hover {
+    color: #96f;
+}
+
 /* ! ----------- ! */
 /* ! MAIN STYLES ! */
 /* ! ----------- ! */
+
+a {
+    text-decoration: none;
+}
+
+#see-more-container {
+    /* Disabled in mobile */
+    display: none;
+    z-index: 2;
+    margin-right: 8%;
+}
+
+#see-more-title {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#see-more-divider {
+    margin-top: 5px;
+    margin-left: 10%;
+    width: 80%;
+    height: 1px;
+    background-color: #171710;
+}
+
+#see-more-title {
+    opacity: 0;
+    animation: 0.75s ease-out 0s 1 fadeIn,
+        0.75s ease-out 0s 1 fromTop;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+
+#see-more-divider, .project {
+    opacity: 0;
+    animation: 0.75s ease-out 0s 1 fadeIn,
+        0.75s ease-out 0s 1 fromBottom;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+}
+
+#see-more-project-list {
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#see-more-project-list .project {
+    font-weight: 100;
+    font-size: 20px;
+
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
 
 #background-color-fader {
     position: absolute;
@@ -93,6 +167,7 @@
 }
 
 #dark-mode-select {
+    box-sizing: border-box;
     background-color: #429;
 }
 
@@ -101,6 +176,7 @@
 }
 
 #light-mode-select {
+    box-sizing: border-box;
     background-color: #acf;
 }
 
@@ -193,7 +269,7 @@
     animation-delay: 1.3s
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
     #name {
         font-size: 100px;
         line-height: 100px;
@@ -201,5 +277,9 @@
 
     #slogan {
         font-size: 30px;
+    }
+
+    #see-more-container {
+        display: block;
     }
 }
