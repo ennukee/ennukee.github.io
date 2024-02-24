@@ -1,8 +1,15 @@
+/* define css variable */
+:root {
+    --dark-accent: rgb(68, 34, 153);
+    --light-accent: rgb(153, 187, 255);
+    --dark-webp-accent: rgb(33, 87, 6);
+    /* No difference in webp vs. no-webp color schemes */
+    --light-webp-accent: var(--light-accent); 
+}
+
 .text {
     transition: color 0.5s;
 }
-
-
 
 #body {
     min-width: 100vw;
@@ -24,9 +31,17 @@
 /* * DARK MODE * */
 /* ! --------- ! */
 
-#body.light {
+.webp #body.light {
+    background: url('../img/background2webp.webp'); 
+    background-size: cover;
+}
+
+.no-webp #body.light, #body.light {
     background: url('../img/background2.png'); 
     background-size: cover;
+}
+
+#body.light {
     color: #171710;
     fill: #171710;
 }
@@ -37,22 +52,28 @@
 }
 
 #body.light #period {
-    background-color: #47f;
+    background-color: var(--light-accent);
 }
 
-#body.light .link {
-    color: #36f;
-    /* font-weight: 400; */
+.webp #body.dark {
+    background: url('../img/background1webp.webp'); 
+    background-size: cover;
 }
 
-#body.light .link:hover {
-    color: #03c;
-}
-
-
-#body.dark {
+.no-webp #body.dark, #body.dark {
     background: url('../img/background.png'); 
     background-size: cover;
+}
+
+#body.dark #period {
+    background-color: var(--dark-accent);
+}
+
+.webp #body.dark #period {
+    background-color: var(--dark-webp-accent)
+}
+
+#body.dark {
     color: #e8e8ef;
     fill: #e8e8ef;
 }
@@ -62,20 +83,8 @@
     opacity: 0.7;
 }
 
-#body.dark #period {
-    background-color: #429;
-}
-
 #body.dark #see-more-divider {
     background-color: #e8e8ef;
-}
-
-#body.dark .link {
-    color: #b9f
-}
-
-#body.dark .link:hover {
-    color: #96f;
 }
 
 /* ! ----------- ! */
@@ -168,7 +177,11 @@ a {
 
 #dark-mode-select {
     box-sizing: border-box;
-    background-color: #429;
+    background-color: var(--dark-accent);
+}
+
+.webp #dark-mode-select {
+    background-color: var(--dark-webp-accent);
 }
 
 #dark-mode-select.selected {
