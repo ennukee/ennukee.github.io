@@ -1,10 +1,7 @@
 /* define css variable */
 :root {
-    --dark-accent: rgb(68, 34, 153);
+    --dark-accent: rgb(33, 87, 6);
     --light-accent: rgb(153, 187, 255);
-    --dark-webp-accent: rgb(33, 87, 6);
-    /* No difference in webp vs. no-webp color schemes */
-    --light-webp-accent: var(--light-accent); 
 }
 
 .text {
@@ -67,10 +64,6 @@
 
 #body.dark #period {
     background-color: var(--dark-accent);
-}
-
-.webp #body.dark #period {
-    background-color: var(--dark-webp-accent)
 }
 
 #body.dark {
@@ -180,10 +173,6 @@ a {
     background-color: var(--dark-accent);
 }
 
-.webp #dark-mode-select {
-    background-color: var(--dark-webp-accent);
-}
-
 #dark-mode-select.selected {
     border: 3px solid #e8e8ef;
 }
@@ -198,11 +187,107 @@ a {
 }
 
 #intro-container {
-    z-index: 2;
     display: flex;
     flex-direction: column;
     
     margin-left: 8%;
+
+    filter: opacity(1);
+    transform: translateX(0px);
+    transition: filter 0.5s ease 0.5s, transform 0.5s ease 0.5s;
+}
+
+#intro-container:not(.intro) {
+    pointer-events: none;
+    filter: opacity(0);
+    transform: translateX(-10px);
+    transition-delay: 0s;
+}
+
+#projects-container {
+    display: flex;
+    flex-direction: column;
+    
+    margin-left: 8%;
+
+    filter: opacity(1);
+    transform: translateX(0px);
+    transition: filter 0.5s ease 0.5s, transform 0.5s ease 0.5s;
+}
+
+#projects-container:not(.projects) {
+    pointer-events: none;
+    filter: opacity(0);
+    transform: translateX(-10px);
+    transition-delay: 0s;
+}
+
+#project-section-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 8px;
+}
+
+#project-section-title {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+#project-section-subtitle {
+    font-size: 14px;
+    font-weight: 100;
+    max-width: 80%;
+}
+
+#individual-project-container {
+    width: 100%;
+
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ip-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+
+    min-width: 50%;
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.ip-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.ip-title {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.ip-description {
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.container {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+}
+
+.gap-top {
+    margin-top: 10px;
 }
 
 #name {
@@ -250,6 +335,32 @@ a {
     flex-direction: row;
     gap: 30px;
 }
+
+.swap-projects {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 100;
+
+    color: var(--dark-accent);
+    filter: brightness(2) grayscale(0.3);
+}
+
+.light .swap-projects {
+    color: var(--light-accent);
+    filter: brightness(0.3) grayscale(0.3);
+    font-weight: 400;
+}
+
+.swap-projects:hover {
+    cursor: pointer;
+    filter: brightness(3) grayscale(1);
+}
+
+.light .swap-projects:hover {
+    cursor: pointer;
+    filter: brightness(0.4) grayscale(0.1);
+}
+
 
 /* ! SVG SECTION */
 
