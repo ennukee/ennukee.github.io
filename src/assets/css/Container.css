@@ -280,6 +280,10 @@ a {
     font-weight: 100;
 }
 
+.light .ip-description {
+    font-weight: 400;
+}
+
 .container {
     z-index: 2;
     position: absolute;
