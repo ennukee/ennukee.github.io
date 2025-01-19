@@ -1,0 +1,57 @@
+#aboutme-container {
+  display: flex;
+  flex-direction: column;
+  
+  margin-left: 8%;
+
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 30px;
+  border-radius: 5px;
+
+  max-height: 90vh;
+  overflow-y: scroll;
+
+  filter: opacity(1);
+  transform: translateX(0px);
+  transition: filter 0.5s ease 0.5s, transform 0.5s ease 0.5s;
+  min-width: 400px;
+  max-width: 40%;
+
+  #body.dark & {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+#aboutme-container:not(.aboutme) {
+  pointer-events: none;
+  filter: opacity(0);
+  transform: translateX(-10px);
+  transition-delay: 0s;
+}
+
+#about-section-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 8px;
+}
+
+#about-section-title {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+#about-section-subtitle {
+  font-size: 16px;
+  line-height: 20px;
+  // font-weight: 100;
+  // max-width: 80%;
+}
+
+b {
+  font-weight: 500;
+}
+
+.gap-top {
+  margin-top: 14px;
+}
