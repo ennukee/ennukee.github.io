@@ -33,7 +33,7 @@ const AboutMe = ({
           Although my skillset doesn't always make me the best for contributing to these areas, I always welcome a good opportunity to get involved. 
         </div>
         <div id="about-section-subtitle" className="gap-top">
-          For more details, make sure to check my GitHub or LinkedIn linked on the main page on the landing page!  
+          For more details, make sure to check my GitHub or LinkedIn linked on the landing page!  
          </div>
       </div>
     </div>
