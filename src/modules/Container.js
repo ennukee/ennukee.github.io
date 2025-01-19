@@ -117,7 +117,7 @@ function Container() {
             </div>
             <div id="intro-container" className={`${viewMode} container`}>
                 {secretStage < 20 && <div className="text" id="name">{secretStage > 13 ? jarbledSecret : 'ennukee'}<span id="period" onClick={removeSecretCompleteFlag}></span></div>}
-                {secretStage < 19 && <div className="text" id="pronunciation">{secretStage > 12 ? jarbledSecret : 'en·nOO·kay'}</div>}
+                {secretStage < 19 && <div className="text" id="pronunciation">{secretStage > 12 ? jarbledSecret : 'en·nOO·kee'}</div>}
                 {secretStage < 18 && <div className="text" id="slogan">code&nbsp;
                     {secretStage > 11 ? jarbledSecret : <Typewriter
                         options={{
