@@ -1316,7 +1316,7 @@ function Container() {
                     <div id="project-section-subtitle">This section are non-professional, personal projects that I've developed for quality of life purposes primarily in gaming.</div>
                     <div id="project-section-subtitle" className="gap-top">Most recent projects are listed first.</div>
                     <div id="project-section-subtitle" className="gap-top">Please note I'm not a UX designer, so some UI elements may not be perfect{' :)'}</div>
-                    <div id="project-section-subtitle" className="gap-top">Last updated: <strong>2025-01-18</strong></div>
+                    <div id="project-section-subtitle" className="gap-top">Last updated: <strong>2026-03-15</strong></div>
                 </div>
                 <div id="individual-project-container">
                     {projects.map(project => (
