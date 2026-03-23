@@ -1,6 +1,13 @@
 module.exports = {
   projects: [
     {
+        title: 'Midnight S1 RWF Chars',
+        liveLink: 'https://dbowers.io/rwf-split-chars/',
+        ghLink: 'https://github.com/ennukee/rwf-split-chars',
+        description: 'Visualizations for gear distribution in RWF guilds during Midnight S1 RWF',
+        created: '2026-03-23'
+    },
+    {
         title: 'Midnight S1 Crest Planner',
         liveLink: 'https://dbowers.io/midnight-s1-crests/',
         ghLink: 'https://github.com/ennukee/midnight-s1-crests',
@@ -13,6 +20,13 @@ module.exports = {
         ghLink: 'https://github.com/ennukee/midnight-s1-pvp',
         description: 'Tool to help plan out the use of PvP gear to accelerate progression for WoW Midnight season 1',
         created: '2026-03-10'
+    },
+    {
+        title: 'Midnight SimC Planner',
+        liveLink: 'https://dbowers.io/midnight-simc-gen/',
+        ghLink: 'https://github.com/ennukee/midnight-simc-gen',
+        description: 'Updated version of the older SimC Gen tools for WoW Midnight',
+        created: '2026-02-27'
     },
     {
         title: 'Alt Manager Addon',
